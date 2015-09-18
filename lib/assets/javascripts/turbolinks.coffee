@@ -114,7 +114,13 @@ fetchHistory = (cachedPage, options = {}) ->
   xhr?.abort()
   changePage cachedPage.title, cachedPage.body, null, runScripts: false
   progressBar?.done()
-  updateScrollPosition(options.scroll)
+
+  if 'requestAnimationFrame' of window
+    window.requestAnimationFrame ->
+      updateScrollPosition(options.scroll)
+  else
+      updateScrollPosition(options.scroll)
+
   triggerEvent EVENTS.RESTORE
 
 cacheCurrentPage = ->
