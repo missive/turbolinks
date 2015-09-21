@@ -683,6 +683,7 @@ else
 #   Turbolinks.cacheCurrentPage()
 #   Turbolinks.enableTransitionCache()
 #   Turbolinks.disableRequestCaching()
+#   Turbolinks.disableFetchWhenCached()
 #   Turbolinks.ProgressBar.enable()
 #   Turbolinks.ProgressBar.disable()
 #   Turbolinks.ProgressBar.start()
@@ -698,6 +699,7 @@ else
   cacheCurrentPage,
   enableTransitionCache,
   disableRequestCaching,
+  disableFetchWhenCached,
   ProgressBar: ProgressBarAPI,
   allowLinkExtensions: Link.allowExtensions,
   supported: browserSupportsTurbolinks,
